@@ -122,7 +122,14 @@
   )
 
   /// 设置链接样式。
-  show link: set text(fill: blue)
+  show link: it => {
+    if type(it.dest) == str {
+      set text(fill: blue)
+      it
+    } else {
+      it
+    }
+  }
 
   /// 设置 figure 样式。
   show figure.where(kind: table): set figure.caption(position: top)
@@ -188,7 +195,7 @@
     margin: page-margin,
   )
 
-  /// 
+  /// 设置定理环境。
   show: show-theorems
 
   body
