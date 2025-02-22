@@ -99,7 +99,7 @@
 
 == 定理环境
 
-我们可以创建@theorem、@lemma
+我们可以创建@definition、@theorem、@lemma 和@proposition 等定理环境。
 
 #definition(title: "Typst 定义")[
   定义内容。
@@ -115,6 +115,34 @@
 
 #proposition[
   命题内容。
+] <proposition>
+
+#emph-box[
+  强调内容。
+]
+
+#quote-box[
+  引用内容。
+]
+
+#note-box[
+  在快速浏览时也应该注意的重要信息。
+]
+
+#tip-box[
+  帮助更好使用的可选建议信息。
+]
+
+#important-box[
+  为了成功使用必须了解的关键信息。
+]
+
+#warning-box[
+  可能存在风险，需要立即注意的关键信息。
+]
+
+#caution-box[
+  可能带来负面后果的提醒信息。
 ]
 
 = 自定义
