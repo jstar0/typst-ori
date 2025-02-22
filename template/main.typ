@@ -99,15 +99,23 @@
 
 == 定理环境
 
-我们可以创建@theorem @lemma
+我们可以创建@theorem、@lemma
 
-#theorem(title: "Fubini 定理")[
-  定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容定理内容容容
+#definition(title: "Typst 定义")[
+  定义内容。
+] <definition>
+
+#theorem(title: "Typst 定理")[
+  定理内容。
 ] <theorem>
 
 #lemma[
   引理内容。
 ] <lemma>
+
+#proposition[
+  命题内容。
+]
 
 = 自定义
 

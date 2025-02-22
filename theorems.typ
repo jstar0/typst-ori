@@ -8,7 +8,7 @@
   inherited-levels: 0,
   inherited-from: heading,
   border-color: orange.darken(0%),
-  title-color: orange.lighten(0%),
+  title-color: orange.darken(0%),
   body-color: orange.lighten(95%),
   numbering: "1.1",
   symbol: sym.suit.heart.stroked,
@@ -108,11 +108,53 @@
   inherited-from: theorem-counter,
 )
 
+#let (corollary-counter, corollary-box, corollary, show-corollary) = make-frames(
+  "corollary",
+  (en: "Corollary", zh: "推论"),
+  inherited-from: theorem-counter,
+)
+
+#let (axiom-counter, axiom-box, axiom, show-axiom) = make-frames(
+  "axiom",
+  (en: "Axiom", zh: "公理"),
+  inherited-levels: 2,
+)
+
+#let (postulate-counter, postulate-box, postulate, show-postulate) = make-frames(
+  "postulate",
+  (en: "Postulate", zh: "假设"),
+  inherited-levels: 2,
+)
+
+#let (definition-counter, definition-box, definition, show-definition) = make-frames(
+  "definition",
+  (en: "Definition", zh: "定义"),
+  inherited-levels: 2,
+  border-color: green.darken(20%),
+  title-color: green.darken(20%),
+  body-color: green.lighten(95%),
+  symbol: sym.suit.club.filled,
+)
+
+#let (proposition-counter, proposition-box, proposition, show-proposition) = make-frames(
+  "proposition",
+  (en: "Proposition", zh: "命题"),
+  inherited-levels: 2,
+  border-color: blue.darken(30%),
+  title-color: blue.darken(30%),
+  body-color: blue.lighten(95%),
+  symbol: sym.suit.spade.filled,
+)
 
 /// 汇总 show rules。
 #let show-theorems(body) = {
   show: show-theorem
   show: show-lemma
+  show: show-corollary
+  show: show-axiom
+  show: show-postulate
+  show: show-definition
+  show: show-proposition
   body
 }
 
