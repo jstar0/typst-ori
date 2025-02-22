@@ -1,9 +1,9 @@
 #import "@preview/numbly:0.1.0": numbly
-#import "@preview/showybox:2.0.4": showybox
 #import "@preview/tablem:0.2.0": tablem, three-line-table
 #import "@preview/mitex:0.2.5": *
 #import "@preview/numbly:0.1.0": numbly
 #import "@preview/cmarker:0.1.2": render as cmarker-render
+#import "theorems.typ": *
 #let md = cmarker-render.with(math: mitex)
 
 #let default-font = (
@@ -133,7 +133,7 @@
   set enum(numbering: numbly("{1:1}.", "{2:1})", "{3:a}."), full: true)
 
   /// 设置引用样式。
-  set bibliography(title: [参考文献], style: "ieee")
+  set bibliography(style: "ieee")
 
   /// 基础设置。
   set document(title: title, author: if type(author) == str { author } else { () }, date: date)
@@ -164,7 +164,7 @@
   /// 重置页面计数器。
   counter(page).update(1)
 
-  /// 设置页眉。
+  /// 设置页面。
   set page(
     paper: "a4",
     header: {
@@ -187,6 +187,9 @@
     numbering: "1",
     margin: page-margin,
   )
+
+  /// 
+  show: show-theorems
 
   body
 }
