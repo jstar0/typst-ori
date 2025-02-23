@@ -3,7 +3,8 @@
 #import "@preview/mitex:0.2.5": *
 #import "@preview/numbly:0.1.0": numbly
 #import "@preview/cmarker:0.1.2": render as cmarker-render
-#import "theorems.typ": *
+#import "@preview/theorion:0.2.0": *
+#import cosmos.fancy: *
 #let md = cmarker-render.with(math: mitex)
 
 #let default-font = (
@@ -196,7 +197,7 @@
   )
 
   /// 设置定理环境。
-  show: show-theorems
+  show: show-theorion
 
   body
 }

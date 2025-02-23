@@ -1,4 +1,4 @@
-#import "../lib.typ": *
+#import "@preview/ori:0.1.0": *
 
 #set heading(numbering: numbly("{1:一}、", default: "1.1  "))
 
@@ -22,13 +22,10 @@
   - #link("https://github.com/IBM/plex")[*IBM Plex Sans, Mono*]
   - #link("https://github.com/notofonts/noto-cjk")[*Noto Serif CJK SC*]
 
-+ 下载 `template.typ` 并在你的文档开头中使用
++ 导入模板，并在文档开头设置参数，包括标题、作者、课程或主题、学期、时间；
   ```typ
-  #import "template.typ": *
-  ``` 来导入模板；
+  #import "@preview/ori:0.1.0": *
 
-+ 在文档开头设置参数，包括标题、作者、课程或主题、学期、时间；
-  ```typ
   #show: ori.with(
     title: "文档标题",
     author: "张三",
@@ -54,7 +51,7 @@
 
 == 三线表
 
-基于 `tablem` 包，提供了简单好用的三线表功能，如@three-line-table。
+基于 #link("https://github.com/OrangeX4/typst-tablem")[*Tablem 包*]，提供了简单好用的三线表功能，如@three-line-table。
 
 ```typ
 #figure(
@@ -82,7 +79,7 @@
 
 == Markdown 渲染
 
-基于 `cmarker` 包和 `mitex` 包，支持 Markdown 渲染，包括数学公式，如：
+基于 #link("https://github.com/SabrinaJewson/cmarker.typ")[*Cmarker 包*] 和 #link("https://github.com/mitex-rs/mitex")[*MiTeX 包*]，支持 Markdown 渲染，包括数学公式，如：
 
 `````typ
 #md(````markdown
@@ -99,7 +96,7 @@
 
 == 定理环境
 
-我们可以创建@definition、@theorem、@lemma 和@proposition 等定理环境。
+基于 #link("https://github.com/OrangeX4/typst-theorion")[*Theorion 包*]，我们可以创建@definition、@theorem、@lemma 和@proposition 等定理环境。
 
 #definition(title: "Typst 定义")[
   定义内容。
@@ -123,6 +120,10 @@
 
 #quote-box[
   引用内容。
+]
+
+#remark[
+  注解内容。
 ]
 
 #note-box[
