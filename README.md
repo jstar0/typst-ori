@@ -20,6 +20,10 @@
     subject: "Ori in Typst",
     semester: "2025 春",
     date: datetime.today(),
+    // maketitle: true,
+    // makeoutline: true,
+    // theme: "dark",
+    // media: "screen",
   )
   ```
 
