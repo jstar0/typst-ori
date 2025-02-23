@@ -1,6 +1,6 @@
 # 🌠Ori
 
-[Ori](https://github.com/OrangeX4/typst-ori) 是一个简单但富有表现力的自用 Typst 文档模板，适用于笔记（支持夜间模式）、报告和各类文档。同时这也是我认为目前 Typst 中文写作的最佳时间。
+[Ori](https://github.com/OrangeX4/typst-ori) 是一个简单但富有表现力的自用 Typst 文档模板，适用于笔记（支持夜间模式）、报告和各类文档。同时也是我个人 Typst 中文写作的最佳实践。
 
 ## 快速开始
 
