@@ -10,21 +10,18 @@
    - [IBM Plex Sans, Mono](https://github.com/IBM/plex)
    - [Noto Serif CJK SC](https://github.com/notofonts/noto-cjk)
 
-2. 在您的文档开头导入模板：
-   ```typst
-   #import "template.typ": *
-   ```
+2. 导入模板，并在文档开头设置参数，包括标题、作者、课程或主题、学期、时间；
+  ```typ
+  #import "@preview/ori:0.1.0": *
 
-3. 设置文档参数：
-   ```typst
-   #show: ori.with(
-     title: "文档标题",
-     author: "作者",
-     subject: "Ori in Typst",
-     semester: "2025 春",
-     date: datetime.today(),
-   )
-   ```
+  #show: ori.with(
+    title: "文档标题",
+    author: "张三",
+    subject: "Ori in Typst",
+    semester: "2025 春",
+    date: datetime.today(),
+  )
+  ```
 
 ## 特性
 
