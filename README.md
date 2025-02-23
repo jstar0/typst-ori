@@ -77,6 +77,10 @@
 
 源码仅有两百行左右，可以复制下来轻松定制。
 
+## 致谢
+
+- 感谢 [hongjr03](https://github.com/hongjr03) 的 [typst-assignment-template](https://github.com/hongjr03/typst-assignment-template)
+
 ## 许可证
 
 MIT License
