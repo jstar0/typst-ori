@@ -1,4 +1,4 @@
-#import "@preview/ori:0.1.0": *
+#import "@preview/ori:0.2.0": *
 
 #set heading(numbering: numbly("{1:一}、", default: "1.1  "))
 
@@ -24,7 +24,7 @@
 
 + 导入模板，并在文档开头设置参数，包括标题、作者、课程或主题、学期、时间；
   ```typ
-  #import "@preview/ori:0.1.0": *
+  #import "@preview/ori:0.2.0": *
 
   #show: ori.with(
     title: "文档标题",
