@@ -2,7 +2,7 @@
 #import "@preview/tablem:0.2.0": tablem, three-line-table
 #import "@preview/mitex:0.2.5": *
 #import "@preview/cmarker:0.1.2": render as cmarker-render
-#import "@preview/theorion:0.3.1": *
+#import "@preview/theorion:0.3.2": *
 #import cosmos.fancy: *
 #let md = cmarker-render.with(math: mitex)
 
