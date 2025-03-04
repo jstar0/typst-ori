@@ -8,12 +8,12 @@
 #let md = cmarker-render.with(math: mitex)
 
 #let default-font = (
-  main: "IBM Plex Serif",
-  mono: "IBM Plex Mono",
-  cjk: "Noto Serif SC",
-  emph-cjk: "Kai",
-  math: "New Computer Modern Math",
-  math-cjk: "Noto Serif SC",
+  main: "Times New Roman",
+  mono: "JetBrainsMono NF",
+  cjk: "Noto Serif CJK SC",
+  emph-cjk: "FZKai-Z03S",
+  math: "IBM Plex Math",
+  math-cjk: "Noto Serif CJK SC",
 )
 
 // Definitions for math
@@ -32,6 +32,8 @@
 /// - author (string): 作者。
 /// - subject (string): 课程名。
 /// - semester (string): 学期。
+/// - teacher (string): 老师。
+/// - course (string): 课程。
 /// - date (datetime): 时间。
 /// - font (object): 字体。默认为 `default-font`。如果你想使用不同的字体，可以传入一个字典，包含 `main`、`mono`、`cjk`、`math` 和 `math-cjk` 字段。
 /// - lang (string): 语言。默认为 `zh`。
@@ -49,6 +51,7 @@
   subject: none,
   teacher: none,
   semester: none,
+  course: none,
   date: none,
   font: default-font,
   lang: "zh",
@@ -64,6 +67,7 @@
   let page-margin = if media == "screen" { (x: 35pt, y: 35pt) } else { auto }
   let text-size = if media == "screen" { screen-size } else { size }
   let bg-color = if theme == "dark" { rgb("#1f1f1f") } else { rgb("#ffffff") }
+  let bg-img = if theme == "dark" { "background-dark.svg" } else { "background.svg" }
   let text-color = if theme == "dark" { rgb("#ffffff") } else { rgb("#000000") }
   let raw-color = if theme == "dark" { rgb("#27292c") } else { rgb("#f0f0f0") }
   let font = default-font + font
@@ -151,7 +155,7 @@
         spacing: 0.2em,
         grid(
           columns: (1fr, auto, 1fr),
-          align(left, semester), align(center, subject), align(right, title),
+          align(left, text[#semester #if course != none{[|]} #course]), align(center, subject), align(right, title),
         ),
         v(0.5em),
         line(length: 100%, stroke: 1pt + text-color),
@@ -160,6 +164,7 @@
       counter(footnote).update(0)
     },
     fill: bg-color,
+    background: image(bg-img, width: 100%, height: 100%),
     numbering: "1",
     margin: page-margin,
   )
@@ -171,7 +176,7 @@
       #line(length: 100%)
       #text(1.5em, weight: 600, subject + " | " + title)\
 
-      #id #author | #semester #h(1fr) #teacher #if teacher != none{[|]} #date.display("[year]年[month]月[day]日")
+      #id #author | #semester #h(1fr) #teacher #if teacher != none{[|]} #course #if course != none{[|]} #date.display("[year]年[month]月[day]日")
       #line(length: 100%)
     ]
   }

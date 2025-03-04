@@ -1,4 +1,4 @@
-#import "/lib.typ": *
+#import "/template/lib.typ": *
 
 #set heading(numbering: numbly("{1:一}、", default: "1.1  "))
 
@@ -7,9 +7,11 @@
   author: "作者",
   subject: "Ori in Typst",
   semester: "2025 春",
+  // teacher: "老师",
+  // course: "课程",
   date: datetime.today(),
   maketitle: true,
-  makeoutline: true,
+  makeoutline: false,
   // theme: "dark",
   // media: "screen",
 )
@@ -19,8 +21,12 @@
 要开始使用此模板，你需要
 
 + 安装必须的字体包，包括：
-  - #link("https://github.com/IBM/plex")[*IBM Plex Sans, Mono*]
-  - #link("https://github.com/notofonts/noto-cjk")[*Noto Serif CJK SC*]
+  - Times New Roman
+  - JetBrainsMono NF
+  - Noto Serif CJK SC
+  - IBM Plex Math
+  添加汉字_强调_之#emph[支持]：
+  - FZKai-Z03S
 
 + 导入模板，并在文档开头设置参数，包括标题、作者、课程或主题、学期、时间；
   ```typ
@@ -166,12 +172,12 @@
 
 ```typ
 #let font = (
-  main: "IBM Plex Sans",
-  mono: "IBM Plex Mono",
-  cjk: "Noto Serif SC",
-  emph-cjk: "KaiTi",
-  math: "New Computer Modern Math",
-  math-cjk: "Noto Serif SC",
+  main: "Times New Roman",
+  mono: "JetBrainsMono NF",
+  cjk: "Noto Serif CJK SC",
+  emph-cjk: "FZKai-Z03S",
+  math: "IBM Plex Math",
+  math-cjk: "Noto Serif CJK SC",
 )
 
 #show: ori.with(

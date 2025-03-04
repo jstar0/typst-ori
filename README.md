@@ -1,5 +1,11 @@
 # 🌠Ori
 
+> 本仓库直接派生于 [hongjr03/typst-ori](https://github.com/hongjr03/typst-ori)，在原仓库的基础上进行了一些修改，以适应自己的需求。
+>
+> 主要添加样式，修改字体配置，修复一些小Bug。
+>
+> 以下为原仓库信息。
+
 [Ori](https://github.com/OrangeX4/typst-ori) 是一个简单但富有表现力的自用 Typst 文档模板，适用于笔记（支持夜间模式）、报告和各类文档。同时也是我个人 Typst 中文写作的最佳实践。
 
 ## 快速开始
