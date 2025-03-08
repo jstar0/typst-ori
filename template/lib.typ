@@ -74,14 +74,22 @@
 
   /// 设置字体。
   set text(
-    font: ((name: font.main, covers: "latin-in-cjk"), font.cjk),
+    font: ((name: font.main), font.cjk),
     size: text-size,
     fill: text-color,
     lang: lang,
     region: region,
   )
-  show emph: text.with(font: ((name: font.main, covers: "latin-in-cjk"), font.emph-cjk))
-  show raw: set text(font: ((name: font.mono, covers: "latin-in-cjk"), font.cjk))
+  show emph: text.with(font: ((name: font.main), font.emph-cjk))
+  show raw: set text(font: ((name: font.mono), font.cjk))
+
+  let cjk-markers = regex("[“”‘’．，。、？！：；（）｛｝［］〔〕〖〗《》〈〉「」【】『』─—＿·…\u{30FC}]+")
+  show cjk-markers: set text(font: font.cjk)
+  show raw: it => {
+    show cjk-markers: set text(font: font.cjk)
+    it
+  }
+
   show math.equation: it => {
     set text(font: font.math)
     show regex("\p{script=Han}"): set text(font: font.math-cjk)
